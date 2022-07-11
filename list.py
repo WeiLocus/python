@@ -53,5 +53,25 @@ scores.clear() #clear 清除，把列表全部清空
 print(scores)
 
 
-
-
+#練習2
+#extend
+list1=[3,1,5,4,2]
+list2=[6,7]
+list1.extend(list2)
+print(list1)
+#append (變成兩個list)
+list3=[3,1,5,4,2]
+list4=[6,7]
+list3.append(list4)
+print(list3)
+#pop-將索引值為2的元素移除
+list3.pop(2)
+print(list3)
+#remove移除某個特定的值-移除4
+list3.remove(4)
+print(list3)
+#sort、reverse
+list1.sort(reverse=True)
+print(list1)
+list1.reverse()
+print(list1)
