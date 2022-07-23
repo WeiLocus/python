@@ -3,6 +3,10 @@
 #1. 
 #如果 我肚子餓
 #     我就去吃飯
+from ctypes.wintypes import FLOAT
+from tkinter import N
+
+
 hungry=False
 if hungry:
     print("我就去吃飯")
@@ -94,3 +98,41 @@ def max_num(num1,num2,num3):
     else:
         return num3
 print(max_num(10,3,5))
+
+#練習:測量你的BMI值，確認你的體重是否正常？
+'''
+BMI公式：體重(公斤) / 身高(公尺)的平方
+BMI值正常範圍：18.5到24之間
+BMI值過重範圍：24到27之間
+'''
+h = float(input("請輸入你的身高"))
+w = float(input("請輸入你的體重"))
+bmi = w/(h**2)
+print("您的BMI值為:" + str(bmi))
+
+if bmi>18.5 and bmi<24:
+    print("體重正常")
+elif bmi>=24 and bmi<27:
+    print("體重過重")
+else:
+    print("體重過輕")
+
+#單位換算cm-inch
+value=float(input("請輸入長度："))
+unit=(input("請輸入單位："))
+if unit == "in":
+    print("%f in = %f cm" %(value,value*2.54))
+elif unit =="cm":
+    print("%f cm = %f in" %(value,value/2.54))
+else:
+    print("請輸入cm或in")
+
+#費氏數列(Fibonacci)
+#第0項是0，第1項是1
+#第n項是前兩項(n-1), (n-2)的總和:0, 1, 1, 2, 3, 5, 8, 13
+def fib(n):
+    if n==0 or n==1:
+        return n
+    else:
+        return fib(n-1)+fib(n-2)
+print(fib(10))
